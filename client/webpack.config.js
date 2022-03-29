@@ -18,17 +18,17 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // HTML Plugin
+      
       new HtmlWebpackPlugin({
         template: './index.html',
         title: "Jate",
       }),
-      // Service Worker
+      
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
-      // Manifest
+      
       new WebpackPwaManifest ({
         fingerprints: false,
         inject: true,
@@ -51,7 +51,7 @@ module.exports = () => {
 
     module: {
       rules: [
-        // CSS and Babel Loaders
+        
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
