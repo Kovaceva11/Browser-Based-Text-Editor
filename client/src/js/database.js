@@ -30,7 +30,7 @@ export const getDb = async () => {
   const store = tx.objectStore('jate');
   const request = store.getAll();
   const result = await request;
-  console.log('result.value', result)
+  console.log('get JateDB: ', result)
   return result;
 };
 
